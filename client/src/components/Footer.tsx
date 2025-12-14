@@ -95,10 +95,15 @@ export function Footer() {
                 <SiInstagram className="w-4 h-4 group-hover:scale-110 transition-transform" />
                 @spectra_3d_hub
               </a>
-              <div className="flex items-center gap-3 text-muted-foreground text-sm">
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=India"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 text-muted-foreground text-sm hover:text-neon-cyan transition-colors"
+              >
                 <MapPin className="w-4 h-4" />
                 India
-              </div>
+              </a>
             </div>
           </motion.div>
         </div>

@@ -55,7 +55,7 @@ export function Navigation() {
             data-testid="link-logo"
           >
             <span className="text-foreground">Spectra</span>{" "}
-            <span className="text-neon-cyan">3D</span>
+            <span className="text-neon-cyan">3D Hub</span>
           </motion.a>
 
           <motion.div
