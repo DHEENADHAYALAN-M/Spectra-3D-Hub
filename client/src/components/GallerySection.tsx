@@ -1,46 +1,17 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { GalleryCategory, categoryLabels, getFeaturedItems, GalleryItem } from "./galleryData";
+import { GalleryModal } from "./GalleryModal";
 
-const galleryItems = [
-  {
-    video: "https://cdn.coverr.co/videos/coverr-3d-printer-printing-9583/1080p.mp4",
-    thumbnail: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&q=80",
-    title: "High-Precision Print",
-    category: "Prototype",
-  },
-  {
-    video: "https://cdn.coverr.co/videos/coverr-using-a-3d-printer-9582/1080p.mp4",
-    thumbnail: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=600&q=80",
-    title: "Custom Design",
-    category: "Production",
-  },
-  {
-    video: "https://cdn.coverr.co/videos/coverr-3d-printer-8571/1080p.mp4",
-    thumbnail: "https://images.unsplash.com/photo-1618365908648-e71bd5716cba?w=600&q=80",
-    title: "Detail Work",
-    category: "Artistic",
-  },
-  {
-    video: "https://cdn.coverr.co/videos/coverr-3d-printed-objects-8318/1080p.mp4",
-    thumbnail: "https://images.unsplash.com/photo-1563725911583-7b4e6a4c7e09?w=600&q=80",
-    title: "Finished Products",
-    category: "Showcase",
-  },
-  {
-    video: "https://cdn.coverr.co/videos/coverr-3d-printing-process-3318/1080p.mp4",
-    thumbnail: "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=600&q=80",
-    title: "Layer by Layer",
-    category: "Process",
-  },
-  {
-    video: "https://cdn.coverr.co/videos/coverr-engineer-working-7589/1080p.mp4",
-    thumbnail: "https://images.unsplash.com/photo-1581092162384-8987c1d64718?w=600&q=80",
-    title: "Quality Control",
-    category: "Engineering",
-  },
-];
-
-function GalleryItem({ item, index }: { item: typeof galleryItems[0]; index: number }) {
+function GalleryItemCard({ 
+  item, 
+  index, 
+  onClick 
+}: { 
+  item: GalleryItem; 
+  index: number;
+  onClick: () => void;
+}) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -52,20 +23,16 @@ function GalleryItem({ item, index }: { item: typeof galleryItems[0]; index: num
       className="group relative aspect-video rounded-lg overflow-hidden cursor-pointer"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      onClick={onClick}
       data-testid={`gallery-item-${index}`}
     >
       <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent z-10" />
       
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        poster={item.thumbnail}
+      <img
+        src={item.thumbnail}
+        alt={item.title}
         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-      >
-        <source src={item.video} type="video/mp4" />
-      </video>
+      />
 
       <div className="absolute inset-0 z-20 flex flex-col justify-end p-4">
         <motion.div
@@ -74,9 +41,12 @@ function GalleryItem({ item, index }: { item: typeof galleryItems[0]; index: num
           transition={{ duration: 0.3 }}
         >
           <span className="text-neon-cyan text-xs font-medium uppercase tracking-wider">
-            {item.category}
+            {categoryLabels[item.category]}
           </span>
           <h3 className="text-foreground font-semibold mt-1">{item.title}</h3>
+          <p className="text-muted-foreground text-xs mt-1 opacity-0 group-hover:opacity-100 transition-opacity">
+            Click to see more
+          </p>
         </motion.div>
       </div>
 
@@ -90,6 +60,21 @@ function GalleryItem({ item, index }: { item: typeof galleryItems[0]; index: num
 }
 
 export function GallerySection() {
+  const [selectedCategory, setSelectedCategory] = useState<GalleryCategory | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  
+  const featuredItems = getFeaturedItems();
+
+  const handleItemClick = (category: GalleryCategory) => {
+    setSelectedCategory(category);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedCategory(null);
+  };
+
   return (
     <section id="gallery" className="py-24 relative" data-testid="section-gallery">
       <div className="absolute inset-0 bg-gradient-to-b from-background via-card/20 to-background" />
@@ -112,16 +97,30 @@ export function GallerySection() {
             </span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Explore our latest projects and see the quality of our 3D printing craftsmanship.
+            Explore our latest projects and see the quality of our 3D printing craftsmanship. Click any category to see more.
           </p>
         </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {galleryItems.map((item, index) => (
-            <GalleryItem key={index} item={item} index={index} />
+          {featuredItems.map((item, index) => (
+            <GalleryItemCard 
+              key={item.id} 
+              item={item} 
+              index={index}
+              onClick={() => handleItemClick(item.category)}
+            />
           ))}
         </div>
       </div>
+
+      <GalleryModal
+        category={selectedCategory}
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+      />
     </section>
   );
 }
+
+export { GalleryModal };
+export type { GalleryCategory };

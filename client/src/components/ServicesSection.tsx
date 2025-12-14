@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { Lightbulb, Lamp, Key, Rocket, Cpu, Palette } from "lucide-react";
 import { useState } from "react";
+import { GalleryCategory, serviceToCategoryMap } from "./galleryData";
+import { GalleryModal } from "./GalleryModal";
 
 const services = [
   {
@@ -47,7 +49,15 @@ const services = [
   },
 ];
 
-function ServiceCard({ service, index }: { service: typeof services[0]; index: number }) {
+function ServiceCard({ 
+  service, 
+  index,
+  onClick 
+}: { 
+  service: typeof services[0]; 
+  index: number;
+  onClick: () => void;
+}) {
   const [isHovered, setIsHovered] = useState(false);
   const Icon = service.icon;
 
@@ -57,9 +67,10 @@ function ServiceCard({ service, index }: { service: typeof services[0]; index: n
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="group relative"
+      className="group relative cursor-pointer"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      onClick={onClick}
       data-testid={`card-service-${index}`}
     >
       <div className="relative h-full rounded-lg border border-border/50 bg-card/50 backdrop-blur-sm overflow-hidden transition-all duration-300 hover:border-neon-cyan/50 hover:shadow-neon">
@@ -92,6 +103,9 @@ function ServiceCard({ service, index }: { service: typeof services[0]; index: n
           </p>
 
           <div className="mt-4 pt-4 border-t border-border/30">
+            <p className="text-neon-cyan text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+              Click to view gallery →
+            </p>
             <motion.div
               initial={{ width: 0 }}
               whileInView={{ width: "100%" }}
@@ -109,6 +123,22 @@ function ServiceCard({ service, index }: { service: typeof services[0]; index: n
 }
 
 export function ServicesSection() {
+  const [selectedCategory, setSelectedCategory] = useState<GalleryCategory | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleServiceClick = (serviceTitle: string) => {
+    const category = serviceToCategoryMap[serviceTitle];
+    if (category) {
+      setSelectedCategory(category);
+      setIsModalOpen(true);
+    }
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedCategory(null);
+  };
+
   return (
     <section id="services" className="py-24 relative" data-testid="section-services">
       <div className="absolute inset-0 bg-gradient-to-b from-background via-card/30 to-background" />
@@ -131,16 +161,27 @@ export function ServicesSection() {
             </span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            From concept to creation, we specialize in bringing your ideas to life with cutting-edge 3D printing technology.
+            From concept to creation, we specialize in bringing your ideas to life. Click any service to explore our work.
           </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
-            <ServiceCard key={service.title} service={service} index={index} />
+            <ServiceCard 
+              key={service.title} 
+              service={service} 
+              index={index}
+              onClick={() => handleServiceClick(service.title)}
+            />
           ))}
         </div>
       </div>
+
+      <GalleryModal
+        category={selectedCategory}
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+      />
     </section>
   );
 }
