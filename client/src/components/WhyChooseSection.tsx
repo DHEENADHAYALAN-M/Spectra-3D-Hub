@@ -108,20 +108,20 @@ export function WhyChooseSection() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="mt-16 text-center"
+          className="mt-16 flex justify-center px-4"
         >
-          <div className="inline-flex items-center gap-8 px-8 py-4 rounded-2xl border border-neon-cyan/20 bg-card/50 backdrop-blur-sm">
-            <div className="text-center">
+          <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-8 px-6 sm:px-8 py-6 sm:py-4 rounded-2xl border border-neon-cyan/20 bg-card/50 backdrop-blur-sm">
+            <div className="text-center min-w-[120px]">
               <div className="font-display text-3xl font-bold text-neon-cyan">500+</div>
               <div className="text-muted-foreground text-sm">Projects Completed</div>
             </div>
-            <div className="w-px h-12 bg-border" />
-            <div className="text-center">
+            <div className="hidden sm:block w-px h-12 bg-border" />
+            <div className="text-center min-w-[120px]">
               <div className="font-display text-3xl font-bold text-neon-cyan">98%</div>
               <div className="text-muted-foreground text-sm">Client Satisfaction</div>
             </div>
-            <div className="w-px h-12 bg-border" />
-            <div className="text-center">
+            <div className="hidden sm:block w-px h-12 bg-border" />
+            <div className="text-center min-w-[120px]">
               <div className="font-display text-3xl font-bold text-neon-cyan">24hr</div>
               <div className="text-muted-foreground text-sm">Quick Turnaround</div>
             </div>
