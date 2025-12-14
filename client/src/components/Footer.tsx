@@ -111,7 +111,7 @@ export function Footer() {
           className="pt-8 border-t border-border/30 flex flex-col sm:flex-row items-center justify-between gap-4"
         >
           <p className="text-muted-foreground text-sm">
-            2024 Spectra 3D Hub. All rights reserved.
+            © 2024 Spectra 3D Hub. All rights reserved. <span className="opacity-70">Built by <span className="text-primary font-semibold">Damnex</span></span>
           </p>
           <p className="text-muted-foreground/60 text-xs">
             Precision Engineering • Innovation • Quality
