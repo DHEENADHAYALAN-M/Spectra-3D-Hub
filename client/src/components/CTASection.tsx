@@ -1,9 +1,5 @@
 import { motion } from "framer-motion";
-import { MessageCircle, ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
-
-const WHATSAPP_NUMBER = "916385444407";
-const WHATSAPP_MESSAGE = encodeURIComponent("Hi Spectra 3D Hub 👋\nI want a quote for 3D printing.");
+import { WhatsAppQuoteDialog } from "./WhatsAppQuoteDialog";
 
 export function CTASection() {
   return (
@@ -65,22 +61,7 @@ export function CTASection() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            <Button
-              size="lg"
-              className="magnetic-button group relative bg-neon-cyan text-background font-semibold px-10 py-7 text-lg shadow-neon-lg"
-              asChild
-              data-testid="button-cta-whatsapp"
-            >
-              <a
-                href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <MessageCircle className="mr-2 h-6 w-6" />
-                Get Quote on WhatsApp
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </a>
-            </Button>
+            <WhatsAppQuoteDialog variant="cta" />
           </motion.div>
 
           <motion.p

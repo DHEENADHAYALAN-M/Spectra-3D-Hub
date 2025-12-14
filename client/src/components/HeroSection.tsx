@@ -1,11 +1,7 @@
 import { motion } from "framer-motion";
-import { MessageCircle, ArrowDown } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
-const WHATSAPP_NUMBER = "916385444407";
-const WHATSAPP_MESSAGE = encodeURIComponent(
-  "Hi Spectra 3D Hub 👋\nI want a quote for 3D printing."
-);
+import { WhatsAppQuoteDialog } from "./WhatsAppQuoteDialog";
 
 export function HeroSection() {
   const scrollToWork = () => {
@@ -74,20 +70,7 @@ export function HeroSection() {
 
           {/* BUTTONS */}
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button
-              size="lg"
-              className="bg-neon-cyan text-black font-semibold px-8 py-6 text-lg shadow-neon hover:scale-105 transition"
-              asChild
-            >
-              <a
-                href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <MessageCircle className="mr-2 h-5 w-5" />
-                Get Quote on WhatsApp
-              </a>
-            </Button>
+            <WhatsAppQuoteDialog variant="hero" />
 
             <Button
               size="lg"
