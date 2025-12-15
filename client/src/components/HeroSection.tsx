@@ -23,19 +23,12 @@ export function HeroSection() {
         />
 
         {/* DARK OVERLAYS (important for bright image) */}
-        <div className="absolute inset-0 bg-black/20" />
+        <div className="absolute inset-0 bg-black/0" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/90" />
         <div className="absolute inset-0 bg-gradient-to-r from-neon-cyan/10 via-transparent to-neon-blue/10" />
       </div>
 
-      {/* ===== GLOW ORBS ===== */}
-      <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-neon-cyan/10 rounded-full blur-3xl animate-glow-pulse" />
-        <div
-          className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-neon-blue/10 rounded-full blur-3xl animate-glow-pulse"
-          style={{ animationDelay: "1s" }}
-        />
-      </div>
+        
 
       {/* ===== CONTENT ===== */}
       <div className="relative z-10 container mx-auto px-4 text-center">
