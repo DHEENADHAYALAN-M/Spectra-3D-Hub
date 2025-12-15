@@ -303,3 +303,21 @@
     inset: -1px;
   }
 }
+/* ===== FORCE HIDE SCROLLBARS (SCROLL STILL WORKS) ===== */
+
+/* Chrome, Edge, Safari */
+*::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: none;
+}
+
+/* IE / old Edge */
+* {
+  -ms-overflow-style: none;
+}
+
