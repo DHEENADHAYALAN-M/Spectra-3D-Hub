@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Target, Zap, Users, BadgeDollarSign, Atom } from "lucide-react";
+import { Target, Zap, Users, BadgeDollarSign, Atom, Sliders } from "lucide-react";
 
 const features = [
   {
@@ -31,6 +31,12 @@ const features = [
     title: "Modern Materials",
     description: "Wide range of materials including PLA, ABS, PETG, TPU, and specialty filaments.",
     gradient: "from-neon-purple to-purple-400",
+  },
+  {
+    icon: Sliders,
+    title: "Customized Products",
+    description: "Tailor-made 3D printed products designed exactly to your specifications, from concept to final print.",
+    gradient: "from-pink-400 to-rose-400",
   },
 ];
 
@@ -97,7 +103,7 @@ export function WhyChooseSection() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {features.map((feature, index) => (
             <FeatureCard key={feature.title} feature={feature} index={index} />
           ))}
