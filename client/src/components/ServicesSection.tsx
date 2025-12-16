@@ -6,15 +6,15 @@ import { GalleryModal } from "./GalleryModal";
 
 const services = [
   {
-    icon: Lightbulb,
+    icon: Lamp,
     title: "Ambient Lighting",
     description: "Custom 3D printed lamps and lighting fixtures that transform any space with artistic illumination.",
     video: "https://cdn.coverr.co/videos/coverr-light-bulb-1636/1080p.mp4",
     color: "from-yellow-400 to-orange-500",
   },
   {
-    icon: Lamp,
-    title: "Table Lamps & Home Décor",
+    icon: Lightbulb,
+    title: "Home Décor",
     description: "Elegant decorative pieces and functional home accessories crafted with precision.",
     video: "https://cdn.coverr.co/videos/coverr-interior-design-studio-2461/1080p.mp4",
     color: "from-pink-400 to-rose-500",
