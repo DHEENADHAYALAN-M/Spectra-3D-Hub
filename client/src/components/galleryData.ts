@@ -138,17 +138,17 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: "17",
-    thumbnail: "/gallery/custom_keychain_acce_8abf48bf.jpg",
-    title: "Logo Keychain",
+    thumbnail: "/gallery/keychain5.png",
+    title: "Letter Keychains",
     category: "keychains",
-    description: "Branded keychain with company logo",
+    description: "Colorful personalized name letter keychains",
   },
   {
     id: "18",
-    thumbnail: "/gallery/custom_keychain_acce_bbbfe2e4.jpg",
-    title: "Custom Name Tag",
+    thumbnail: "/gallery/keychain6.png",
+    title: "Character Keychains",
     category: "keychains",
-    description: "Personalized name tag accessory",
+    description: "Cute cartoon character miniature keychains",
   },
   {
     id: "19",
