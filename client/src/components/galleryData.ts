@@ -152,17 +152,17 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: "19",
-    thumbnail: "/gallery/custom1_1765902081141.jpg",
-    title: "Custom Trophy",
-    category: "aerospace",
-    description: "Unique 3D printed award trophy",
-  },
-  {
-    id: "20",
     thumbnail: "/gallery/custom2_1765902081142.jpg",
     title: "Photo Lithophane",
     category: "aerospace",
     description: "Personalized photo lithophane display",
+  },
+  {
+    id: "20",
+    thumbnail: "/gallery/custom1_1765902081141.jpg",
+    title: "Custom Objects",
+    category: "aerospace",
+    description: "Unique 3D prints",
   },
   {
     id: "21",
