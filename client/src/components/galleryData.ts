@@ -110,10 +110,10 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: "13",
-    thumbnail: "/gallery/keychain2_1765902081144.webp",
-    title: "Name Keychains",
+    thumbnail: "/gallery/keychain6.png",
+    title: "Character Keychains",
     category: "keychains",
-    description: "Personalized colorful name keychains",
+    description: "Cute cartoon character miniature keychains",
   },
   {
     id: "14",
@@ -145,10 +145,10 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: "18",
-    thumbnail: "/gallery/keychain6.png",
-    title: "Character Keychains",
+    thumbnail: "/gallery/keychain2_1765902081144.webp",
+    title: "Name Keychains",
     category: "keychains",
-    description: "Cute cartoon character miniature keychains",
+    description: "Personalized colorful name keychains",
   },
   {
     id: "19",
