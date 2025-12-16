@@ -194,17 +194,17 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: "25",
-    thumbnail: "/gallery/prototype1_1765902081145.jpg",
-    title: "Robotic Arm",
-    category: "prototypes",
-    description: "Functional robotic arm prototype",
-  },
-  {
-    id: "26",
     thumbnail: "/gallery/machine1_1765902081145.jpg",
     title: "Turbine Impeller",
     category: "prototypes",
     description: "Precision turbine impeller component",
+  },
+  {
+    id: "26",
+    thumbnail: "/gallery/prototype1_1765902081145.jpg",
+    title: "Robotic Arm",
+    category: "prototypes",
+    description: "Functional robotic arm prototype",
   },
   {
     id: "27",
