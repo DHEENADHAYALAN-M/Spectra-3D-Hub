@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Lightbulb, Lamp, Key, Rocket, Cpu, Palette } from "lucide-react";
+import { Lightbulb, Lamp, Key, Puzzle, Cpu, Palette } from "lucide-react";
 import { useState } from "react";
 import { GalleryCategory, serviceToCategoryMap } from "./galleryData";
 import { GalleryModal } from "./GalleryModal";
@@ -27,9 +27,9 @@ const services = [
     color: "from-green-400 to-emerald-500",
   },
   {
-    icon: Rocket,
-    title: "Aerospace & Educational Models",
-    description: "Detailed display models for aerospace, architecture, and educational demonstrations.",
+    icon: Puzzle,
+    title: "Custom Models",
+    description: "Tailor-made 3D printed models designed to match your exact requirements.",
     video: "https://cdn.coverr.co/videos/coverr-3d-printer-8571/1080p.mp4",
     color: "from-blue-400 to-indigo-500",
   },
