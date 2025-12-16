@@ -96,7 +96,7 @@ export function Footer() {
                 @spectra_3d_hub
               </a>
               <a
-                href="https://www.google.com/maps/search/?api=1&query=India"
+                href="https://www.google.com/maps/place/Spectra3dhub/@10.9561591,78.0961526,17z/data=!3m1!4b1!4m6!3m5!1s0x3baa2f000bfedca9:0xec2413644ccaee0c!8m2!3d10.9561538!4d78.0987275!16s%2Fg%2F11mrcy29wb?authuser=0&entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-muted-foreground text-sm hover:text-neon-cyan transition-colors"
