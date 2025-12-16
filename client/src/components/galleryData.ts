@@ -280,9 +280,9 @@ export const galleryItems: GalleryItem[] = [
 
 export const serviceToCategoryMap: Record<string, GalleryCategory> = {
   "Ambient Lighting": "lighting",
-  "Table Lamps & Home Décor": "home-decor",
+  "Home Décor": "home-decor",
   "Custom Keychains & Accessories": "keychains",
-  "Aerospace & Educational Models": "aerospace",
+  "Custom Models": "aerospace",
   "Hackathon & Startup Prototypes": "prototypes",
   "Statues & Artistic Prints": "artistic",
 };

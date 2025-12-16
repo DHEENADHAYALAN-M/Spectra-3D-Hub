@@ -127,12 +127,6 @@ export function ServicesSection() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleServiceClick = (serviceTitle: string) => {
-    if (serviceTitle === "Custom Models") {
-      document
-        .getElementById("customized-products")
-        ?.scrollIntoView({ behavior: "smooth" });
-      return;
-    }
     const category = serviceToCategoryMap[serviceTitle];
     if (category) {
       setSelectedCategory(category);

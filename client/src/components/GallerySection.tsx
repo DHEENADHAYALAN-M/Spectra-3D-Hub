@@ -103,16 +103,12 @@ export function GallerySection() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {featuredItems.map((item, index) => (
-            <div 
-              key={item.id}
-              id={item.category === "aerospace" ? "customized-products" : undefined}
-            >
-              <GalleryItemCard 
-                item={item} 
-                index={index}
-                onClick={() => handleItemClick(item.category)}
-              />
-            </div>
+            <GalleryItemCard 
+              key={item.id} 
+              item={item} 
+              index={index}
+              onClick={() => handleItemClick(item.category)}
+            />
           ))}
         </div>
       </div>
