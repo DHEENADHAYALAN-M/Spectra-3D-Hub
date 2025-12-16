@@ -276,6 +276,34 @@ export const galleryItems: GalleryItem[] = [
     category: "artistic",
     description: "Detailed fantasy character sculpture",
   },
+  {
+    id: "37",
+    thumbnail: "/gallery/statue1_1765905223792.jpg",
+    title: "Custom Portrait Bust",
+    category: "artistic",
+    description: "Personalized 3D printed portrait bust with name engraving",
+  },
+  {
+    id: "38",
+    thumbnail: "/gallery/statue2_1765905223795.jpg",
+    title: "Realistic Self Portrait",
+    category: "artistic",
+    description: "Hyper-realistic colored bust sculpture",
+  },
+  {
+    id: "39",
+    thumbnail: "/gallery/statue3_1765905223797.jpg",
+    title: "Full Body Figurine",
+    category: "artistic",
+    description: "Custom full-body 3D printed figurine",
+  },
+  {
+    id: "40",
+    thumbnail: "/gallery/statue4_1765905223799.jpg",
+    title: "Historical Figures Collection",
+    category: "artistic",
+    description: "Hand-painted collection of iconic historical personalities",
+  },
 ];
 
 export const serviceToCategoryMap: Record<string, GalleryCategory> = {
