@@ -110,10 +110,10 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: "13",
-    thumbnail: "/gallery/keychain_1.jpeg_1765902081143.jpg",
-    title: "Octopus Keychains",
+    thumbnail: "/gallery/keychain2_1765902081144.webp",
+    title: "Name Keychains",
     category: "keychains",
-    description: "Colorful articulated octopus keychains",
+    description: "Personalized colorful name keychains",
   },
   {
     id: "14",
@@ -124,10 +124,10 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: "15",
-    thumbnail: "/gallery/keychain2_1765902081144.webp",
-    title: "Name Keychains",
+    thumbnail: "/gallery/keychain_1.jpeg_1765902081143.jpg",
+    title: "Toy Keychains",
     category: "keychains",
-    description: "Personalized colorful name keychains",
+    description: "Playful toy keychains",
   },
   {
     id: "16",
