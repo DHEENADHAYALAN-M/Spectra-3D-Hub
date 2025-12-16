@@ -222,17 +222,17 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: "29",
-    thumbnail: "/gallery/3d_printed_prototype_226a0e42.jpg",
-    title: "Product Prototype",
+    thumbnail: "/gallery/prototype2_1765905477614.png",
+    title: "Structural Design Model",
     category: "prototypes",
-    description: "Early-stage product development model",
+    description: "Complex lattice structure prototype design",
   },
   {
     id: "30",
-    thumbnail: "/gallery/3d_printed_prototype_05fe0223.jpg",
-    title: "Mechanical Part",
+    thumbnail: "/gallery/prototype3_1765905477614.jpg",
+    title: "Jet Engine Cutaway",
     category: "prototypes",
-    description: "Precision mechanical component",
+    description: "Detailed jet engine cross-section model",
   },
   {
     id: "31",
