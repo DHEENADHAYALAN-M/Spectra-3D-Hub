@@ -70,7 +70,11 @@ export function GalleryModal({ category, isOpen, onClose }: GalleryModalProps) {
                       <img
                         src={item.thumbnail}
                         alt={item.title}
-                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+                        className={`w-full h-full transition-transform duration-300 group-hover:scale-[1.03] ${
+                        categoryLabel === "customized products" || categoryLabel === "statues"
+                        ? "object-contain bg-black"
+                        : "object-cover object-top"
+                        }`}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                       <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
