@@ -14,7 +14,7 @@ export function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const { scrollY } = useScroll();
-  
+
   const navBackground = useTransform(
     scrollY,
     [0, 100],
@@ -46,18 +46,26 @@ export function Navigation() {
     >
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
+
+          {/* ===== LOGO + NAME ===== */}
           <motion.a
             href="#hero"
-            className="font-display text-xl font-bold"
+            className="flex items-center gap-3 font-display text-xl font-bold"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             data-testid="link-logo"
           >
-            <span className="text-foreground">Spectra</span>{" "}
+            <img
+              src="/favicon.png"
+              alt="Spectra 3D Hub Logo"
+              className="w-9 h-9 object-contain"
+            />
+            <span className="text-foreground">Spectra</span>
             <span className="text-neon-cyan">3D Hub</span>
           </motion.a>
 
+          {/* ===== DESKTOP LINKS ===== */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -81,6 +89,7 @@ export function Navigation() {
             ))}
           </motion.div>
 
+          {/* ===== DESKTOP CTA ===== */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -93,14 +102,11 @@ export function Navigation() {
               asChild
               data-testid="button-nav-quote"
             >
-              <a
-                href="#cta"
-              >
-                Get Quote
-              </a>
+              <a href="#cta">Get Quote</a>
             </Button>
           </motion.div>
 
+          {/* ===== MOBILE MENU BUTTON ===== */}
           <Button
             variant="ghost"
             size="icon"
@@ -112,6 +118,7 @@ export function Navigation() {
           </Button>
         </div>
 
+        {/* ===== MOBILE MENU ===== */}
         <motion.div
           initial={false}
           animate={{
@@ -127,7 +134,9 @@ export function Navigation() {
                 href={link.href}
                 className="text-foreground hover:text-neon-cyan transition-colors py-2"
                 onClick={() => setIsMenuOpen(false)}
-                data-testid={`mobile-nav-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
+                data-testid={`mobile-nav-${link.label
+                  .toLowerCase()
+                  .replace(/\s+/g, '-')}`}
               >
                 {link.label}
               </a>
