@@ -79,7 +79,7 @@ export function Footer() {
                 href="tel:+916385444407"
                 className="flex items-center gap-3 text-muted-foreground hover:text-neon-cyan transition-colors text-sm group"
                 data-cursor="link"
-                data-testid="link-phone"
+                data-testid="link-phone" 
               >
                 <Phone className="w-4 h-4 group-hover:scale-110 transition-transform" />
                 +91 6385444407
