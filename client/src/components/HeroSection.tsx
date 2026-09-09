@@ -80,30 +80,15 @@ export function HeroSection() {
           </motion.div>
 
           {/* RIGHT: FOUNDER IMAGE */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9, y: 30 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.2 }}
-            className="lg:col-span-5 flex justify-center lg:justify-end relative"
-          >
-            <div className="relative max-w-md w-full flex justify-center items-center">
-              {/* Radial Neon Glow Behind Founder */}
-              <div className="absolute w-72 h-72 sm:w-96 sm:h-96 rounded-full bg-gradient-to-tr from-neon-cyan/30 via-neon-blue/20 to-purple-600/20 blur-3xl -z-10 animate-pulse pointer-events-none" />
-
-              {/* Founder Image with gentle floating animation */}
-              <motion.div
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="relative z-10 w-full max-w-[320px] sm:max-w-[380px] lg:max-w-[420px] flex justify-center"
-              >
-                <img
-                  src="/founderpic.png"
-                  alt="Spectra 3D Hub Founder"
-                  className="w-full h-auto object-contain drop-shadow-[0_20px_35px_rgba(0,242,254,0.3)] select-none pointer-events-none"
-                />
-              </motion.div>
+          <div className="lg:col-span-5 flex justify-center lg:justify-end items-end">
+            <div className="w-full max-w-[420px] sm:max-w-[500px] lg:max-w-[560px] flex justify-center lg:justify-end">
+              <img
+                src="/founderpic.png"
+                alt="Spectra 3D Hub Founder"
+                className="w-full h-auto object-contain"
+              />
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
