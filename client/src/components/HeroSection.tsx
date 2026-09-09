@@ -11,10 +11,10 @@ export function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-visible"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
       {/* ===== BACKGROUND IMAGE ===== */}
-      <div className="absolute inset-0 z-0 overflow-hidden">
+      <div className="absolute inset-0 z-0">
         <div
           className="w-full h-full bg-cover bg-center scale-105"
           style={{
@@ -29,14 +29,14 @@ export function HeroSection() {
       </div>
 
       {/* ===== CONTENT ===== */}
-      <div className="relative z-10 lg:z-[60] container max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 pt-28 pb-12 lg:py-0">
+      <div className="relative z-10 container max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 pt-28 pb-12 lg:py-0">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 items-center min-h-[calc(100vh-4rem)]">
           {/* LEFT: TEXT & ACTIONS */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9 }}
-            className="lg:col-span-7 text-left py-8 lg:py-16 relative z-10"
+            className="lg:col-span-7 text-left py-8 lg:py-16"
           >
             {/* BADGE */}
             <span className="inline-block mb-6 px-4 py-2 rounded-full border border-neon-cyan/40 bg-neon-cyan/10 text-neon-cyan text-sm backdrop-blur">
@@ -77,9 +77,9 @@ export function HeroSection() {
             </div>
           </motion.div>
 
-          {/* RIGHT: FOUNDER IMAGE (Moved further right & made bigger, shifted up) */}
-          <div className="lg:col-span-5 flex justify-center lg:justify-end items-end self-end relative z-[60] pointer-events-none">
-            <div className="w-full flex justify-center lg:justify-end items-end lg:translate-x-8 xl:translate-x-16 -translate-y-6 lg:-translate-y-10">
+          {/* RIGHT: FOUNDER IMAGE */}
+          <div className="lg:col-span-5 flex justify-center lg:justify-end items-end self-end">
+            <div className="w-full flex justify-center lg:justify-end items-end lg:translate-x-8 xl:translate-x-16 -translate-y-4 lg:-translate-y-8">
               <img
                 src="/founderpic.png"
                 alt="Spectra 3D Hub Founder"
