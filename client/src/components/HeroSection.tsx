@@ -11,10 +11,10 @@ export function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center overflow-visible"
     >
       {/* ===== BACKGROUND IMAGE ===== */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 overflow-hidden">
         <div
           className="w-full h-full bg-cover bg-center scale-105"
           style={{
@@ -28,17 +28,15 @@ export function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-r from-neon-cyan/10 via-transparent to-neon-blue/10" />
       </div>
 
-        
-
       {/* ===== CONTENT ===== */}
-      <div className="relative z-10 container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-12 lg:py-0">
+      <div className="relative z-10 lg:z-[60] container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-12 lg:py-0">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center min-h-[calc(100vh-5rem)]">
           {/* LEFT: TEXT & ACTIONS */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9 }}
-            className="lg:col-span-6 text-left py-8 lg:py-16"
+            className="lg:col-span-6 text-left py-8 lg:py-16 relative z-10"
           >
             {/* BADGE */}
             <span className="inline-block mb-6 px-4 py-2 rounded-full border border-neon-cyan/40 bg-neon-cyan/10 text-neon-cyan text-sm backdrop-blur">
@@ -79,13 +77,13 @@ export function HeroSection() {
             </div>
           </motion.div>
 
-          {/* RIGHT: FOUNDER IMAGE */}
-          <div className="lg:col-span-6 flex justify-center lg:justify-end items-end self-end overflow-visible">
+          {/* RIGHT: FOUNDER IMAGE (In front of navbar) */}
+          <div className="lg:col-span-6 flex justify-center lg:justify-end items-end self-end relative z-[60] pointer-events-none">
             <div className="w-full flex justify-center lg:justify-end items-end">
               <img
                 src="/founderpic.png"
                 alt="Spectra 3D Hub Founder"
-                className="w-full max-w-[550px] sm:max-w-[650px] lg:max-w-none h-auto lg:h-[88vh] object-contain object-bottom scale-100 lg:scale-115 xl:scale-125 origin-bottom"
+                className="w-full max-w-[550px] sm:max-w-[650px] lg:max-w-none h-auto lg:h-[92vh] object-contain object-bottom scale-100 lg:scale-120 xl:scale-130 origin-bottom select-none"
               />
             </div>
           </div>
