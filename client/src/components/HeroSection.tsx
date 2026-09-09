@@ -79,22 +79,22 @@ export function HeroSection() {
 
           {/* RIGHT: FOUNDER IMAGE & PROFILE GLASS CARD */}
           <div className="lg:col-span-5 flex justify-center lg:justify-end items-end self-end relative">
-            <div className="relative inline-flex flex-col items-center justify-end lg:translate-x-8 xl:translate-x-16 -translate-y-4 lg:-translate-y-8">
+            <div className="relative flex flex-col items-center lg:items-end justify-end">
               {/* Founder Image */}
               <img
                 src="/founderpic.png"
                 alt="Dharunraj R - Founder & CEO"
-                className="w-full max-w-[440px] sm:max-w-[520px] lg:max-w-[640px] xl:max-w-[720px] max-h-[86vh] lg:max-h-[90vh] object-contain object-bottom select-none"
+                className="w-full max-w-[440px] sm:max-w-[520px] lg:max-w-[620px] xl:max-w-[700px] max-h-[86vh] lg:max-h-[90vh] object-contain object-bottom select-none"
               />
 
-              {/* Glassmorphic Founder Card (Positioned on the Left of the Person) */}
+              {/* Glassmorphic Founder Card (Positioned directly over the founder's lower torso) */}
               <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="absolute bottom-16 sm:bottom-24 lg:bottom-28 left-2 sm:left-[-20px] lg:left-[-60px] xl:left-[-80px] z-30 w-[92%] sm:w-auto max-w-[340px] sm:max-w-[360px]"
+                className="absolute bottom-6 sm:bottom-10 left-1/2 -translate-x-1/2 lg:left-auto lg:right-10 lg:translate-x-0 z-30 w-[90%] sm:w-[340px] md:w-[360px]"
               >
-                <div className="p-4 sm:p-5 rounded-2xl sm:rounded-3xl bg-black/65 backdrop-blur-2xl border border-white/20 shadow-2xl flex items-center justify-between gap-4 text-left transition-all duration-300 hover:border-neon-cyan/40 hover:bg-black/80 group">
+                <div className="p-4 sm:p-5 rounded-2xl sm:rounded-3xl bg-black/60 backdrop-blur-2xl border border-white/20 shadow-2xl flex items-center justify-between gap-4 text-left transition-all duration-300 hover:border-neon-cyan/40 hover:bg-black/75 group">
                   <div className="flex flex-col">
                     <span className="text-xs font-semibold text-neon-cyan uppercase tracking-wider mb-1">
                       Founder & CEO
