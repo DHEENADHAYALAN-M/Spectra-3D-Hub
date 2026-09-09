@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { WhatsAppQuoteDialog } from "./WhatsAppQuoteDialog";
 
@@ -77,14 +77,48 @@ export function HeroSection() {
             </div>
           </motion.div>
 
-          {/* RIGHT: FOUNDER IMAGE */}
-          <div className="lg:col-span-5 flex justify-center lg:justify-end items-end self-end">
-            <div className="w-full flex justify-center lg:justify-end items-end lg:translate-x-8 xl:translate-x-16 -translate-y-4 lg:-translate-y-8">
+          {/* RIGHT: FOUNDER IMAGE & PROFILE GLASS CARD */}
+          <div className="lg:col-span-5 flex justify-center lg:justify-end items-end self-end relative">
+            <div className="w-full relative flex justify-center lg:justify-end items-end lg:translate-x-8 xl:translate-x-16 -translate-y-4 lg:-translate-y-8">
+              {/* Founder Image */}
               <img
                 src="/founderpic.png"
-                alt="Spectra 3D Hub Founder"
+                alt="Dharunraj R - Founder & CEO"
                 className="w-full max-w-[440px] sm:max-w-[520px] lg:max-w-[640px] xl:max-w-[720px] max-h-[86vh] lg:max-h-[90vh] object-contain object-bottom select-none"
               />
+
+              {/* Glassmorphic Founder Card */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                className="absolute bottom-6 sm:bottom-10 left-2 sm:left-auto sm:right-4 lg:right-8 z-30 max-w-[340px] sm:max-w-[370px] w-full"
+              >
+                <div className="p-4 sm:p-5 rounded-2xl sm:rounded-3xl bg-black/45 backdrop-blur-xl border border-white/20 shadow-2xl flex items-center justify-between gap-4 text-left transition-all duration-300 hover:border-neon-cyan/40 hover:bg-black/55 group">
+                  <div className="flex flex-col">
+                    <span className="text-xs font-medium text-neon-cyan/90 uppercase tracking-wider mb-1">
+                      Founder & CEO
+                    </span>
+                    <h2 className="text-lg sm:text-xl font-bold text-white tracking-tight">
+                      Dharunraj R
+                    </h2>
+                    <p className="text-xs sm:text-sm text-gray-300 mt-1 leading-snug">
+                      Connect on LinkedIn & explore collaborations
+                    </p>
+                  </div>
+
+                  {/* External Link Redirect Button */}
+                  <a
+                    href="https://www.linkedin.com/in/dharunraj-r-843432328/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-white text-black hover:bg-neon-cyan hover:text-black flex items-center justify-center shrink-0 shadow-lg transition-all duration-300 group-hover:scale-105"
+                    aria-label="View Dharunraj R's LinkedIn Profile"
+                  >
+                    <ArrowUpRight className="w-5 h-5 sm:w-6 sm:h-6 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  </a>
+                </div>
+              </motion.div>
             </div>
           </div>
         </div>
