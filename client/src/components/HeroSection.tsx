@@ -31,12 +31,12 @@ export function HeroSection() {
         
 
       {/* ===== CONTENT ===== */}
-      <div className="relative z-10 container mx-auto px-4 text-center">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-left">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9 }}
-          className="max-w-4xl mx-auto"
+          className="max-w-3xl"
         >
           {/* BADGE */}
           <span className="inline-block mb-6 px-4 py-2 rounded-full border border-neon-cyan/40 bg-neon-cyan/10 text-neon-cyan text-sm backdrop-blur">
@@ -52,17 +52,17 @@ export function HeroSection() {
           </h1>
 
           {/* SUBTITLE */}
-          <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-4 max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-4 max-w-2xl">
             Turning ideas into high-quality 3D printed products
           </p>
 
-          <p className="text-base sm:text-lg text-gray-400 mb-10 max-w-xl mx-auto">
+          <p className="text-base sm:text-lg text-gray-400 mb-10 max-w-xl">
             From custom prototypes to artistic prints, we bring your designs to
             life with precision engineering and modern materials.
           </p>
 
           {/* BUTTONS */}
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <div className="flex flex-col sm:flex-row justify-start items-stretch sm:items-center gap-4">
             <WhatsAppQuoteDialog variant="hero" />
 
             <Button
