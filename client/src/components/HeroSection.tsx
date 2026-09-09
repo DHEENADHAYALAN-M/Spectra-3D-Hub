@@ -97,7 +97,7 @@ export function HeroSection() {
                 className="relative z-10 w-full max-w-[320px] sm:max-w-[380px] lg:max-w-[420px] flex justify-center"
               >
                 <img
-                  src="/Founderpic.png"
+                  src="/founderpic.png"
                   alt="Spectra 3D Hub Founder"
                   className="w-full h-auto object-contain drop-shadow-[0_20px_35px_rgba(0,242,254,0.3)] select-none pointer-events-none"
                 />
