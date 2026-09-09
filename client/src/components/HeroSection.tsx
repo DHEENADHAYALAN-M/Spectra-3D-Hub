@@ -29,8 +29,8 @@ export function HeroSection() {
       </div>
 
       {/* ===== CONTENT ===== */}
-      <div className="relative z-10 lg:z-[60] container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-12 lg:py-0">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center min-h-[calc(100vh-4rem)]">
+      <div className="relative z-10 lg:z-[60] container max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 pt-28 pb-12 lg:py-0">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 items-center min-h-[calc(100vh-4rem)]">
           {/* LEFT: TEXT & ACTIONS */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -77,13 +77,13 @@ export function HeroSection() {
             </div>
           </motion.div>
 
-          {/* RIGHT: FOUNDER IMAGE (Right-aligned, proportional size, in front of navbar) */}
+          {/* RIGHT: FOUNDER IMAGE (Moved further right & made bigger) */}
           <div className="lg:col-span-5 flex justify-center lg:justify-end items-end self-end relative z-[60] pointer-events-none">
-            <div className="w-full flex justify-center lg:justify-end items-end lg:translate-x-4 xl:translate-x-8">
+            <div className="w-full flex justify-center lg:justify-end items-end lg:translate-x-8 xl:translate-x-16">
               <img
                 src="/founderpic.png"
                 alt="Spectra 3D Hub Founder"
-                className="w-full max-w-[380px] sm:max-w-[460px] lg:max-w-[520px] xl:max-w-[580px] max-h-[82vh] object-contain object-bottom select-none"
+                className="w-full max-w-[440px] sm:max-w-[520px] lg:max-w-[640px] xl:max-w-[720px] max-h-[86vh] lg:max-h-[90vh] object-contain object-bottom select-none"
               />
             </div>
           </div>
