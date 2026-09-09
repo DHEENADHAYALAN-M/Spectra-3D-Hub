@@ -100,7 +100,7 @@ export function HeroSection() {
                       Founder & CEO
                     </span>
                     <h2 className="text-lg sm:text-xl font-bold text-white tracking-tight">
-                      Dharunraj R
+                      DHARUNRAJ. R
                     </h2>
                     <p className="text-xs sm:text-sm text-gray-300 mt-1 leading-snug">
                       Connect on LinkedIn & explore collaborations
