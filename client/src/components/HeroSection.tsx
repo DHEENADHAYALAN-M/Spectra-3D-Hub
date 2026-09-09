@@ -79,7 +79,7 @@ export function HeroSection() {
 
           {/* RIGHT: FOUNDER IMAGE & PROFILE GLASS CARD */}
           <div className="lg:col-span-5 flex justify-center lg:justify-end items-end self-end relative">
-            <div className="w-full relative flex justify-center lg:justify-end items-end lg:translate-x-8 xl:translate-x-16 -translate-y-4 lg:-translate-y-8">
+            <div className="relative inline-flex flex-col items-center justify-end lg:translate-x-8 xl:translate-x-16 -translate-y-4 lg:-translate-y-8">
               {/* Founder Image */}
               <img
                 src="/founderpic.png"
@@ -87,16 +87,16 @@ export function HeroSection() {
                 className="w-full max-w-[440px] sm:max-w-[520px] lg:max-w-[640px] xl:max-w-[720px] max-h-[86vh] lg:max-h-[90vh] object-contain object-bottom select-none"
               />
 
-              {/* Glassmorphic Founder Card */}
+              {/* Glassmorphic Founder Card (Centered to the person & moved down) */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="absolute bottom-6 sm:bottom-10 left-2 sm:left-auto sm:right-4 lg:right-8 z-30 max-w-[340px] sm:max-w-[370px] w-full"
+                className="absolute bottom-2 sm:bottom-4 left-1/2 -translate-x-1/2 z-30 w-[92%] max-w-[340px] sm:max-w-[380px]"
               >
-                <div className="p-4 sm:p-5 rounded-2xl sm:rounded-3xl bg-black/45 backdrop-blur-xl border border-white/20 shadow-2xl flex items-center justify-between gap-4 text-left transition-all duration-300 hover:border-neon-cyan/40 hover:bg-black/55 group">
+                <div className="p-4 sm:p-5 rounded-2xl sm:rounded-3xl bg-black/60 backdrop-blur-2xl border border-white/20 shadow-2xl flex items-center justify-between gap-4 text-left transition-all duration-300 hover:border-neon-cyan/40 hover:bg-black/75 group">
                   <div className="flex flex-col">
-                    <span className="text-xs font-medium text-neon-cyan/90 uppercase tracking-wider mb-1">
+                    <span className="text-xs font-semibold text-neon-cyan uppercase tracking-wider mb-1">
                       Founder & CEO
                     </span>
                     <h2 className="text-lg sm:text-xl font-bold text-white tracking-tight">
