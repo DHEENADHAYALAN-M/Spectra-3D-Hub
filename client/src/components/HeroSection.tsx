@@ -31,14 +31,14 @@ export function HeroSection() {
         
 
       {/* ===== CONTENT ===== */}
-      <div className="relative z-10 container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-0">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+      <div className="relative z-10 container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-12 lg:py-0">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center min-h-[calc(100vh-5rem)]">
           {/* LEFT: TEXT & ACTIONS */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9 }}
-            className="lg:col-span-6 text-left"
+            className="lg:col-span-6 text-left py-8 lg:py-16"
           >
             {/* BADGE */}
             <span className="inline-block mb-6 px-4 py-2 rounded-full border border-neon-cyan/40 bg-neon-cyan/10 text-neon-cyan text-sm backdrop-blur">
@@ -80,12 +80,12 @@ export function HeroSection() {
           </motion.div>
 
           {/* RIGHT: FOUNDER IMAGE */}
-          <div className="lg:col-span-6 flex justify-center lg:justify-end items-center">
-            <div className="w-full max-w-[480px] sm:max-w-[580px] lg:max-w-[700px] xl:max-w-[780px] flex justify-center lg:justify-end">
+          <div className="lg:col-span-6 flex justify-center lg:justify-end items-end self-end overflow-visible">
+            <div className="w-full flex justify-center lg:justify-end items-end">
               <img
                 src="/founderpic.png"
                 alt="Spectra 3D Hub Founder"
-                className="w-full h-auto max-h-[80vh] object-contain drop-shadow-2xl"
+                className="w-full max-w-[550px] sm:max-w-[650px] lg:max-w-none h-auto lg:h-[88vh] object-contain object-bottom scale-100 lg:scale-115 xl:scale-125 origin-bottom"
               />
             </div>
           </div>
