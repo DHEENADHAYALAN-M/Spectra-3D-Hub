@@ -77,13 +77,13 @@ export function HeroSection() {
             </div>
           </motion.div>
 
-          {/* RIGHT: FOUNDER IMAGE */}
-          <div className="lg:col-span-6 flex justify-center items-end relative w-full mt-6 lg:mt-0">
-            <div className="relative flex flex-col items-center justify-end mx-auto">
+          {/* RIGHT: FOUNDER IMAGE (Enlarged & Positioned Cleanly on the Right) */}
+          <div className="lg:col-span-6 flex justify-center lg:justify-end items-end self-center lg:self-end relative w-full mt-4 lg:mt-0">
+            <div className="relative w-fit flex justify-center lg:justify-end items-end mx-auto lg:mr-0 lg:translate-x-6 xl:translate-x-10">
               <img
                 src="/founderpic.png"
                 alt="Spectra 3D Hub Founder"
-                className="w-auto max-w-[320px] sm:max-w-[420px] lg:max-w-[560px] xl:max-w-[640px] h-auto max-h-[48vh] sm:max-h-[60vh] lg:max-h-[85vh] object-contain object-bottom select-none"
+                className="w-full max-w-[360px] sm:max-w-[460px] lg:max-w-[660px] xl:max-w-[760px] h-auto max-h-[52vh] sm:max-h-[64vh] lg:max-h-[92vh] object-contain object-bottom select-none"
               />
             </div>
           </div>
