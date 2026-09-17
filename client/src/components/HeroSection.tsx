@@ -78,23 +78,23 @@ export function HeroSection() {
           </motion.div>
 
           {/* RIGHT: FOUNDER IMAGE & PROFILE GLASS CARD */}
-          <div className="lg:col-span-6 flex justify-center lg:justify-end items-end self-center lg:self-end relative w-full mt-4 lg:mt-0">
-            <div className="relative w-fit flex justify-center lg:justify-end items-end mx-auto lg:mr-0 lg:translate-x-12 xl:translate-x-16 2xl:translate-x-20">
+          <div className="lg:col-span-6 flex justify-center items-end relative w-full mt-6 lg:mt-0">
+            <div className="relative flex flex-col items-center justify-end mx-auto">
               {/* Founder Image */}
               <img
                 src="/founderpic.png"
                 alt="Dharunraj R - Founder & CEO"
-                className="w-full max-w-[360px] sm:max-w-[460px] lg:max-w-[660px] xl:max-w-[760px] h-auto max-h-[52vh] sm:max-h-[64vh] lg:max-h-[92vh] object-contain object-bottom select-none"
+                className="w-auto max-w-[300px] sm:max-w-[420px] lg:max-w-[560px] xl:max-w-[640px] h-auto max-h-[48vh] sm:max-h-[60vh] lg:max-h-[85vh] object-contain object-bottom select-none"
               />
 
-              {/* Glassmorphic Founder Card (Locked to Exact Bottom Center of Picture) */}
+              {/* Glassmorphic Founder Card (Centered inside the grid and on the photo) */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
-                className="absolute bottom-2 sm:bottom-4 lg:bottom-6 left-1/2 -translate-x-1/2 z-30 w-[92%] sm:w-[330px] md:w-[360px]"
+                className="absolute bottom-2 sm:bottom-4 lg:bottom-6 left-1/2 -translate-x-1/2 z-30 w-[92%] sm:w-[320px] md:w-[350px]"
               >
-                <div className="p-3.5 sm:p-5 rounded-2xl sm:rounded-3xl bg-black/70 backdrop-blur-2xl border border-white/20 shadow-2xl flex items-center justify-between gap-3 sm:gap-4 text-left transition-all duration-300 hover:border-neon-cyan/40 hover:bg-black/85 group">
+                <div className="p-3.5 sm:p-5 rounded-2xl sm:rounded-3xl bg-black/75 backdrop-blur-2xl border border-white/20 shadow-2xl flex items-center justify-between gap-3 sm:gap-4 text-left transition-all duration-300 hover:border-neon-cyan/40 hover:bg-black/90 group">
                   <div className="flex flex-col min-w-0">
                     <span className="text-[11px] sm:text-xs font-semibold text-neon-cyan uppercase tracking-wider mb-0.5 sm:mb-1">
                       Founder & CEO
