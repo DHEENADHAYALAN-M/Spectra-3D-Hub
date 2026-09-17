@@ -123,7 +123,7 @@ export function HeroSection() {
       </div>
 
       {/* SCROLL INDICATOR (Desktop Only) */}
-      <div className="hidden lg:flex absolute bottom-6 left-1/2 -translate-x-1/2 text-gray-400">
+      <div className="hidden lg:flex absolute bottom-6 left-0 px-8 text-gray-400">
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 1.5, repeat: Infinity }}
