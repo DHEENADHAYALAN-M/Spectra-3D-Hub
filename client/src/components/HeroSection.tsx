@@ -87,7 +87,7 @@ export function HeroSection() {
                 className="w-full max-w-[360px] sm:max-w-[460px] lg:max-w-[660px] xl:max-w-[760px] h-auto max-h-[52vh] sm:max-h-[64vh] lg:max-h-[92vh] object-contain object-bottom select-none block pointer-events-none"
               />
 
-              {/* Founder Name Card (Centered on the person's torso at bottom of portrait) */}
+              {/* Founder Name Card (Aligned over Dharunraj's torso matching reference screenshot) */}
               <motion.a
                 href="https://www.linkedin.com/in/dharunraj-r-843432328/"
                 target="_blank"
@@ -95,14 +95,14 @@ export function HeroSection() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
-                className="absolute bottom-4 sm:bottom-6 lg:bottom-10 left-1/2 -translate-x-1/2 z-30 w-[88%] sm:w-[320px] md:w-[360px] lg:w-[390px] px-5 py-3.5 sm:px-6 sm:py-4 rounded-2xl bg-black/90 backdrop-blur-xl border border-fuchsia-500/60 shadow-[0_0_25px_rgba(217,70,239,0.2)] flex items-center justify-between gap-3 sm:gap-4 text-left transition-all duration-300 hover:scale-[1.02] hover:border-fuchsia-400 hover:shadow-[0_0_30px_rgba(217,70,239,0.35)] group cursor-pointer"
+                className="absolute bottom-3 sm:bottom-5 lg:bottom-8 right-2 sm:right-4 lg:right-6 z-30 w-[84%] sm:w-[310px] md:w-[340px] lg:w-[360px] px-4 py-3 sm:px-5 sm:py-3.5 rounded-2xl bg-black/90 backdrop-blur-xl border border-fuchsia-500/60 shadow-[0_0_25px_rgba(217,70,239,0.2)] flex items-center justify-between gap-3 text-left transition-all duration-300 hover:scale-[1.02] hover:border-fuchsia-400 hover:shadow-[0_0_30px_rgba(217,70,239,0.35)] group cursor-pointer"
                 aria-label="Connect with Dharunraj R on LinkedIn"
               >
                 <div className="flex flex-col min-w-0">
                   <span className="text-[#38bdf8] text-xs sm:text-sm font-medium tracking-wide">
                     Founder & CEO
                   </span>
-                  <h2 className="text-white text-base sm:text-xl md:text-2xl font-black tracking-wider uppercase mt-0.5 leading-tight">
+                  <h2 className="text-white text-base sm:text-lg md:text-xl font-black tracking-wider uppercase mt-0.5 leading-tight">
                     DHARUNRAJ R
                   </h2>
                   <span className="text-[#38bdf8] text-xs sm:text-sm font-normal mt-0.5">
@@ -112,7 +112,7 @@ export function HeroSection() {
 
                 <div className="shrink-0 flex items-center justify-center">
                   <ExternalLink
-                    className="w-7 h-7 sm:w-9 sm:h-9 text-[#38bdf8] transition-transform duration-300 group-hover:scale-110 group-hover:text-sky-300"
+                    className="w-7 h-7 sm:w-8 sm:h-8 text-[#38bdf8] transition-transform duration-300 group-hover:scale-110 group-hover:text-sky-300"
                     strokeWidth={2.2}
                   />
                 </div>
