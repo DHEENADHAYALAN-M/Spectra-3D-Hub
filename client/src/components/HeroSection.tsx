@@ -87,12 +87,12 @@ export function HeroSection() {
                 className="w-full h-auto max-h-[52vh] sm:max-h-[62vh] lg:max-h-[90vh] object-contain object-bottom select-none"
               />
 
-              {/* Glassmorphic Founder Card */}
+              {/* Glassmorphic Founder Card (Shifted to the left) */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="absolute bottom-2 sm:bottom-6 lg:bottom-10 left-1/2 -translate-x-1/2 lg:left-auto lg:right-6 lg:translate-x-0 z-30 w-[94%] sm:w-[340px] md:w-[360px]"
+                className="absolute bottom-3 sm:bottom-6 lg:bottom-10 left-1/2 -translate-x-1/2 lg:left-auto lg:right-24 xl:right-32 lg:translate-x-0 z-30 w-[94%] sm:w-[340px] md:w-[360px]"
               >
                 <div className="p-3.5 sm:p-5 rounded-2xl sm:rounded-3xl bg-black/65 backdrop-blur-2xl border border-white/20 shadow-2xl flex items-center justify-between gap-3 sm:gap-4 text-left transition-all duration-300 hover:border-neon-cyan/40 hover:bg-black/80 group">
                   <div className="flex flex-col min-w-0">
