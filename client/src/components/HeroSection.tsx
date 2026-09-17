@@ -36,7 +36,7 @@ export function HeroSection() {
             initial={{ opacity: 0, x: -40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9 }}
-            className="lg:col-span-7 text-left py-2 sm:py-6 lg:py-16"
+            className="lg:col-span-6 text-left py-2 sm:py-6 lg:py-16"
           >
             {/* BADGE */}
             <span className="inline-block mb-3 sm:mb-6 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full border border-neon-cyan/40 bg-neon-cyan/10 text-neon-cyan text-xs sm:text-sm backdrop-blur">
@@ -77,13 +77,13 @@ export function HeroSection() {
             </div>
           </motion.div>
 
-          {/* RIGHT: FOUNDER IMAGE */}
-          <div className="lg:col-span-5 flex justify-center items-end self-center lg:self-end relative w-full mt-4 lg:mt-0">
-            <div className="relative w-fit max-w-[320px] sm:max-w-[420px] lg:max-w-[560px] xl:max-w-[620px] flex flex-col items-center justify-end mx-auto">
+          {/* RIGHT: FOUNDER IMAGE (Enlarged & Positioned Cleanly on the Right) */}
+          <div className="lg:col-span-6 flex justify-center lg:justify-end items-end self-center lg:self-end relative w-full mt-4 lg:mt-0">
+            <div className="relative w-fit flex justify-center lg:justify-end items-end mx-auto lg:mr-0 lg:translate-x-6 xl:translate-x-10">
               <img
                 src="/founderpic.png"
                 alt="Spectra 3D Hub Founder"
-                className="w-auto max-w-full h-auto max-h-[48vh] sm:max-h-[60vh] lg:max-h-[85vh] object-contain object-bottom select-none"
+                className="w-full max-w-[360px] sm:max-w-[460px] lg:max-w-[660px] xl:max-w-[760px] h-auto max-h-[52vh] sm:max-h-[64vh] lg:max-h-[92vh] object-contain object-bottom select-none"
               />
             </div>
           </div>
